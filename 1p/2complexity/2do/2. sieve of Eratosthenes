@@ -1,0 +1,16 @@
+let  E= parseInt(prompt("teclea el numero"));         
+  let i,j;
+  let primo=[E];
+  for(let i=0;i<E;i++){
+    primo[i]=true;
+  }
+  
+  for(i=2;i<E;i++){
+   for(j=2;i*j<E;j++){
+     primo[i*j]=false;
+   }
+  }
+  for(i=2;i<E;i++){
+    if(primo[i])
+      document.write(i+ " ");
+  }
